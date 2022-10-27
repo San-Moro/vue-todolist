@@ -75,11 +75,11 @@ main ul i {
 }
 
 main span.done-task {
-    color: #3F9999;
     padding: 0 .5em;
+    
 }
 
-main span.delete-task {
-    color: #6140DB;
+.text-decoration {
+    text-decoration: line-through;
 }
 

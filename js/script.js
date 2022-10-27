@@ -27,17 +27,26 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
-        newTask : "",
-        
-        task : {
-            text: "Fare esercizio",
-            done: false,
+      newTask : "",
+
+      tasks : [
+        {
+          text: "Fare esercizio",
+          done: false,
         },
+      ],
     };
   },
   methods: {
     addTask() {
-        
+      if (this.newTask !== "") {
+        this.tasks.push({text:this.newTask, done:false});
+        this.newTask = "";
+
+      }
+    },
+    removeTask(indexOfTask) {
+      this.tasks.splice(indexOfTask,[1]);
     }
   }
 }).mount("#app");
