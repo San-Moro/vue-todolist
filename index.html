@@ -18,15 +18,14 @@
             <h1>To do list</h1>
             <div class="new-task">
                 <label for="input-task"></label>
-                <input type="text" placeholder="Inserisci il tuo nuovo task" id="input-task">
-                <button><i class="fa-solid fa-plus"></i></button>
+                <input type="text" placeholder="Inserisci il tuo nuovo task" id="input-task" v-model="newTask">
+                <button @click="addTask"><i class="fa-solid fa-plus"></i></button>
             </div>
         </header>
         <main>
             <div class="tasks-container">
                 <ul>
-                    <li>
-                        task inserito dall'input
+                    <li v-for="(task) in task">{{task.text}} {{task.done}}
                         <div class="icon-task">
                             <span class="done-task">
                                 <i class="fa-solid fa-circle-check"></i>

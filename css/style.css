@@ -47,6 +47,7 @@ header h1 {
 .new-task i {
     color: white;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 /* MAIN */
@@ -65,10 +66,12 @@ header h1 {
     justify-content: space-between;
     font-size: 1.2rem;
     padding: .5em 0;
+    border-bottom: 1px solid #8F8E71;
 }
 
 main ul i {
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
 main span.done-task {
